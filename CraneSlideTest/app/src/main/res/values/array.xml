@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="craneType">
+        <item>A型起重机</item>
+        <item>B型起重机</item>
+        <item>C型起重机</item>
+        <item>D型起重机</item>
+        <item>E型起重机</item>
+        <item>F型起重机</item>
+        <item>G型起重机</item>
+        <item>H型起重机</item>
+        <item>I型起重机</item>
+    </string-array>
+</resources>

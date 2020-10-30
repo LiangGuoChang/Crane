@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="起重机下滑量检测仪"
+            android:textSize="22sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_start_test"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="开始测试"
+            android:textSize="19sp"
+            android:onClick="@{listener.onClick}"
+            android:background="@drawable/start_text_selector"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+
+        <Button
+            android:id="@+id/btn_connect_test"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="链接测试"
+            android:textSize="19sp"
+            android:onClick="@{listener.onClick}"
+            android:background="@drawable/connect_test_init_bg"
+            android:textColor="@android:color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_start_test" />
+
+        <Button
+            android:id="@+id/btn_search_data"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="数据查询"
+            android:textSize="19sp"
+            android:onClick="@{listener.onClick}"
+            android:background="@drawable/connect_test_init_bg"
+            android:textColor="@android:color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_connect_test" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
