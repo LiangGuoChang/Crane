@@ -82,9 +82,9 @@
         android:text="额定起重量"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@id/tv_crane_no"
-        app:layout_constraintTop_toBottomOf="@id/et_crane_num" />
+        app:layout_constraintTop_toTopOf="@id/et_rate_qty"
+        app:layout_constraintBottom_toBottomOf="@id/et_rate_qty" />
 
     <EditText
         android:id="@+id/et_rate_qty"
@@ -94,12 +94,16 @@
         android:maxLength="10"
         android:layout_marginStart="15dp"
         android:inputType="number"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:background="@drawable/connect_test_init_bg"
         app:layout_constraintStart_toEndOf="@id/tv_rate_qty_text"
         app:layout_constraintEnd_toStartOf="@id/tv_rate_qty_unit"
-        app:layout_constraintTop_toTopOf="@id/tv_rate_qty_text" />
+        app:layout_constraintTop_toBottomOf="@id/et_crane_num" />
 
     <TextView
         android:id="@+id/tv_rate_qty_unit"
@@ -121,9 +125,9 @@
         android:text="最小上升速度"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@id/tv_rate_qty_text"
-        app:layout_constraintTop_toBottomOf="@id/tv_rate_qty_text" />
+        app:layout_constraintTop_toTopOf="@id/et_mini_speed"
+        app:layout_constraintBottom_toBottomOf="@id/et_mini_speed" />
 
     <EditText
         android:id="@+id/et_mini_speed"
@@ -132,13 +136,17 @@
         android:maxLines="1"
         android:maxLength="10"
         android:layout_marginStart="15dp"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
         android:inputType="numberDecimal"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:background="@drawable/connect_test_init_bg"
         app:layout_constraintStart_toEndOf="@id/tv_mini_speed_text"
         app:layout_constraintEnd_toStartOf="@id/tv_mini_speed_unit"
-        app:layout_constraintTop_toTopOf="@id/tv_mini_speed_text" />
+        app:layout_constraintTop_toBottomOf="@id/et_rate_qty" />
 
     <TextView
         android:id="@+id/tv_mini_speed_unit"
