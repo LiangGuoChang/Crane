@@ -45,9 +45,168 @@
             android:id="@+id/crane_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:gravity="center" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_crane_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起重机编号"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_cranes_type"
+        app:layout_constraintTop_toTopOf="@id/et_crane_num"
+        app:layout_constraintBottom_toBottomOf="@id/et_crane_num" />
+
+    <EditText
+        android:id="@+id/et_crane_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:maxLength="25"
+        app:layout_constraintTop_toBottomOf="@id/tv_cranes_type"
+        app:layout_constraintStart_toEndOf="@id/tv_crane_no"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_rate_qty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="额定起重量"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/tv_crane_no"
+        app:layout_constraintTop_toBottomOf="@id/et_crane_num" />
+
+    <EditText
+        android:id="@+id/et_rate_qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:layout_marginStart="15dp"
+        android:inputType="number"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:background="@drawable/connect_test_init_bg"
+        app:layout_constraintStart_toEndOf="@id/tv_rate_qty_text"
+        app:layout_constraintEnd_toStartOf="@id/tv_rate_qty_unit"
+        app:layout_constraintTop_toTopOf="@id/tv_rate_qty_text" />
+
+    <TextView
+        android:id="@+id/tv_rate_qty_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toEndOf="@id/et_rate_qty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_rate_qty_text" />
+
+    <TextView
+        android:id="@+id/tv_mini_speed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最小上升速度"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/tv_rate_qty_text"
+        app:layout_constraintTop_toBottomOf="@id/tv_rate_qty_text" />
+
+    <EditText
+        android:id="@+id/et_mini_speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:layout_marginStart="15dp"
+        android:inputType="numberDecimal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:background="@drawable/connect_test_init_bg"
+        app:layout_constraintStart_toEndOf="@id/tv_mini_speed_text"
+        app:layout_constraintEnd_toStartOf="@id/tv_mini_speed_unit"
+        app:layout_constraintTop_toTopOf="@id/tv_mini_speed_text" />
+
+    <TextView
+        android:id="@+id/tv_mini_speed_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cm/s"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toEndOf="@id/et_mini_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_mini_speed_text" />
+
+
+    <TextView
+        android:id="@+id/tv_inspectors_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="检验人员"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_mini_speed_text"
+        app:layout_constraintTop_toTopOf="@id/et_inspectors"
+        app:layout_constraintBottom_toBottomOf="@id/et_inspectors" />
+
+    <EditText
+        android:id="@+id/et_inspectors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:maxLength="25"
+        app:layout_constraintTop_toBottomOf="@id/tv_mini_speed_text"
+        app:layout_constraintStart_toEndOf="@id/tv_inspectors_text"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_last_step"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="上一步"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/step_btn_press_selector"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_next_step"
+        app:layout_constraintTop_toBottomOf="@id/tv_inspectors_text" />
+
+    <Button
+        android:id="@+id/btn_next_step"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/step_btn_press_selector"
+        app:layout_constraintStart_toEndOf="@id/btn_last_step"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_inspectors_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
