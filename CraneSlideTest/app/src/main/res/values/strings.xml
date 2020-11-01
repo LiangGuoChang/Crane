@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CraneSlideTest</string>
+    <string name="test_next_step">下一步</string>
+    <string name="test_result_save">保存</string>
 </resources>

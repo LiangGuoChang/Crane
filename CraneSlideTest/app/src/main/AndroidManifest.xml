@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".TestParamSettingActivity"></activity>
+        <activity android:name=".LineChartActivity"></activity>
+        <activity android:name=".TestParamSettingActivity" />
+        <activity android:name=".LineChartDemo" />
 
         <service
             android:name=".TcpService"

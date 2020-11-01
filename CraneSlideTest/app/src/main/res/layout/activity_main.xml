@@ -14,19 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="起重机下滑量检测仪"
-            android:textSize="22sp"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textStyle="bold"
-            android:padding="15dp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/common_title_layout" />
 
         <Button
             android:id="@+id/btn_start_test"
@@ -40,7 +30,7 @@
             android:textColor="@android:color/white"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+            app:layout_constraintTop_toBottomOf="@id/layout_title" />
 
 
         <Button

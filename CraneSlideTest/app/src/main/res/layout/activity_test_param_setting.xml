@@ -4,19 +4,9 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="起重机下滑量检测仪"
-        android:textSize="22sp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textStyle="bold"
-        android:padding="15dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/common_title_layout" />
 
     <TextView
         android:id="@+id/tv_cranes_type"
@@ -28,7 +18,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@id/layout_title" />
 
 
     <LinearLayout
@@ -187,34 +177,17 @@
         app:layout_constraintStart_toEndOf="@id/tv_inspectors_text"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/btn_last_step"
-        android:layout_width="0dp"
+    <include
+        android:id="@+id/last_next_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="上一步"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:background="@drawable/step_btn_press_selector"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_next_step"
-        app:layout_constraintTop_toBottomOf="@id/tv_inspectors_text" />
-
-    <Button
-        android:id="@+id/btn_next_step"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="下一步"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        layout="@layout/last_next_step_layout"
         android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/step_btn_press_selector"
-        app:layout_constraintStart_toEndOf="@id/btn_last_step"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_inspectors_text" />
+        app:layout_constraintStart_toStartOf="@id/tv_inspectors_text"
+        app:layout_constraintEnd_toEndOf="@id/et_inspectors"
+        app:layout_constraintTop_toBottomOf="@id/et_inspectors" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

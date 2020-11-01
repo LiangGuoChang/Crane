@@ -108,6 +108,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             Intent intent = new Intent(this, TestParamSettingActivity.class);
             startActivity(intent);
+        } else if (viewId == R.id.btn_search_data) {
+            LineChartDemo.startActivity(this);
         }
     }
 }

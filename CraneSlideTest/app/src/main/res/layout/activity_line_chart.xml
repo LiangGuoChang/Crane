@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isShowResult"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/common_title_layout" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/data_line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_title"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <Button
+            android:id="@+id/btn_start_stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始测试"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/step_btn_press_selector"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="@{isShowResult?View.GONE:View.VISIBLE}"
+            app:layout_constraintTop_toBottomOf="@id/data_line_chart"
+            app:layout_constraintStart_toStartOf="@id/data_line_chart"
+            app:layout_constraintEnd_toEndOf="@id/data_line_chart"
+            tool:visibility="gone" />
+
+        <!--运行速度-->
+        <include
+            android:id="@+id/run_speed_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_test_result_layout"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/btn_start_stop"
+            app:layout_constraintStart_toStartOf="@id/data_line_chart"
+            app:layout_constraintEnd_toEndOf="@id/data_line_chart" />
+
+        <!--制停距离-->
+        <include
+            android:id="@+id/stop_dis_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_test_result_layout"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/run_speed_layout"
+            app:layout_constraintStart_toStartOf="@id/data_line_chart"
+            app:layout_constraintEnd_toEndOf="@id/data_line_chart" />
+
+        <!--制停减速度-->
+        <include
+            android:id="@+id/stop_decrease_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_test_result_layout"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/stop_dis_layout"
+            app:layout_constraintStart_toStartOf="@id/data_line_chart"
+            app:layout_constraintEnd_toEndOf="@id/data_line_chart" />
+
+        <!--检验结果-->
+        <include
+            android:id="@+id/test_result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_test_result_layout"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/stop_decrease_layout"
+            app:layout_constraintStart_toStartOf="@id/data_line_chart"
+            app:layout_constraintEnd_toEndOf="@id/data_line_chart" />
+
+        <!--结果表-->
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{isShowResult?View.VISIBLE:View.GONE}"
+            app:constraint_referenced_ids="run_speed_layout,stop_dis_layout,stop_decrease_layout,test_result_layout" />
+
+
+        <include
+            android:id="@+id/last_next_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/last_next_step_layout"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toStartOf="@id/btn_start_stop"
+            app:layout_constraintEnd_toEndOf="@id/btn_start_stop"
+            app:layout_constraintTop_toBottomOf="@id/test_result_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

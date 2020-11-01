@@ -1,4 +1,4 @@
-package com.example.charttest;
+package com.zhao.craneslidetest;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,8 +9,6 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -26,6 +24,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LineChartDemo extends AppCompatActivity implements View.OnClickListener {
 

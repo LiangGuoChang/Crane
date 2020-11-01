@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/btn_last_step"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="上一步"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/step_btn_press_selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_next_step"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/btn_next_step"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/step_btn_press_selector"
+        app:layout_constraintStart_toEndOf="@id/btn_last_step"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.zhao.craneslidetest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -43,6 +44,8 @@ public class TestParamSettingActivity extends AppCompatActivity implements View.
 
             case R.id.btn_next_step:
                 //下一步
+                Intent intent = new Intent(this, LineChartActivity.class);
+                startActivity(intent);
                 break;
 
             default:
