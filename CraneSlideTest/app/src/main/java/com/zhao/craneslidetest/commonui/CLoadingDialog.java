@@ -7,23 +7,23 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.zhao.craneslidetest.R;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-
-import com.zhao.craneslidetest.R;
 
 /**
  * @Author : LiangGuoChang
  * @Date : 2020/11/1
  * @描述 :
  */
-public class CLoadingDailog extends AlertDialog {
+public class CLoadingDialog extends AlertDialog {
 
     private String msg;
     private ImageView loadingImg;
     private AnimationDrawable animationDrawable;
 
-    protected CLoadingDailog(@NonNull Context context, String msg) {
+    protected CLoadingDialog(@NonNull Context context, String msg) {
         super(context, R.style.loadingStyle);
         this.msg = msg;
     }

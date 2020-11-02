@@ -73,6 +73,13 @@ public class TcpService extends Service {
         mConnectStatus.setValue(AppConstants.CONNECTING);
     }
 
+    //断开连接
+    public void disconnectTcpServer() {
+        if (null != mSocketClient && mSocketClient.isConnected()) {
+            mSocketClient.disconnect();
+        }
+    }
+
     //设置自动读取的固定包头、包尾
     private void setReadHeaderAndTrailer() {
         mSocketClient.getSocketPacketHelper().setReadStrategy(SocketPacketHelper.ReadStrategy.AutoReadToTrailer);
